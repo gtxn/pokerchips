@@ -8,10 +8,10 @@ Try it for yourself here: http://pokerchip-io.us-east-1.elasticbeanstalk.com/
 
 
 ### LOGIN
-<img src='https://user-images.githubusercontent.com/59089164/147743474-dabcad69-6936-43de-ad40-ec0fb7cf1629.png' width=100/>
+<img src='https://user-images.githubusercontent.com/59089164/147743474-dabcad69-6936-43de-ad40-ec0fb7cf1629.png' width=300/>
 
 ### GAMEBOARD
-<img src='https://user-images.githubusercontent.com/59089164/147743818-cf041d11-758b-4851-add1-36673e47e1e4.png' width=100 />
+<img src='https://user-images.githubusercontent.com/59089164/147743818-cf041d11-758b-4851-add1-36673e47e1e4.png' width=300 />
 
 ### DEMO
 https://user-images.githubusercontent.com/59089164/147744534-95a70cc1-efc9-4ad1-bd86-fce880b6eef8.mp4
