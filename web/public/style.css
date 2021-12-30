@@ -1,0 +1,172 @@
+h1 {
+    padding: 1em;
+    color: white;
+}
+
+h1#title {
+    color: #ffffff;
+    text-shadow: 3px 3px rgb(163, 163, 163);
+    font-weight: 500;
+    font-size: 3em;
+    
+    animation-name:bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
+h3#gameRoomId {
+    color: white;
+    border: 2px white solid;
+    margin: 1em 3em;
+    padding: 0.5em 3em;
+}
+
+#pot:hover {
+    background-color: #4b6b86;
+}
+
+.flex {
+    display: flex;
+}
+
+.signupform {
+    margin: auto auto;
+    border: 2px black solid;
+    padding: 30px 30px;
+}
+
+.loginTitle {
+    color: white;
+    text-shadow: 2px 2px rgb(163, 163, 163);
+    font-weight: 800;
+    font-size: 1.6em;
+}
+
+.center {
+    text-align: center;
+}
+
+.gametable {
+    text-align: center;
+
+    background-color: #627c91;
+    border: 2px black solid;
+    margin: 0 auto;
+
+    width: 300px;
+    height: 500px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.col {
+    border: 0.5px gray solid;
+    margin: 0.5em;
+    background-color: rgb(238, 238, 238);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #363370;
+}
+
+
+.playerbox {
+    background-color: #a595d0;
+    color: white;
+}
+
+.mybox {
+    background-color: #c69bf5;
+    border: 3px white solid;
+    color: white;
+    font-size: 1.5em;
+}
+
+.pot {
+    background-color: #2f495e;
+    font-weight: 400;
+    font-size: 2em;
+    color: white;
+
+    border: 0.5px gray solid;
+    margin: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.putinpot {
+    text-align: center;
+}
+
+.one {
+    background: url(assets/yellowchip.png) no-repeat;
+}
+.five {
+    background: url(assets/redchip.png) no-repeat;    
+}
+.ten {
+    background: url(assets/bluechip.png) no-repeat;    
+}
+.fifty {
+    background: url(assets/greenchip.png) no-repeat;    
+}
+.hundred {
+    background: url(assets/blackchip.png) no-repeat;    
+}
+
+.chip {
+    background-size: 100%;
+    background-size: 50px 50px;
+    width: 50px;
+    height:50px;
+    color: yellow;
+}
+
+button:hover,
+.chip:hover {
+    box-shadow: 2px 2px rgb(241, 241, 241);
+    transform: translate(1px, 1px)
+}
+
+
+/* RESPONSIVE DESIGN */
+@media only screen and (min-width:700px){
+    .gametable{
+        width: 700px;
+        height: 350px;
+        border: 2px solid black;
+    }
+}
+
+@media only screen and (min-width:900px){
+    .gametable{
+        width: 900px;
+        height: 450px;
+        border: 2px solid black;
+
+    }
+}
+
+/* ANIMATION */
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="uikit/uikit.css">
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+
+    <link rel="icon" href="./assets/icon.jpg">
+
+    <title>Poker Chips</title>
+</head>
+
+<body>
+
+    <div class="center">
+        <h1 id='title'>Poker Chips</h1>
+        <div class="uk-child-width-expand@s uk-text-center uk-grid-match" uk-grid>
+            <div>
+
+                <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                    <div class="uk-width-3-4 uk-position-center uk-position-relative">
+                        <div
+                            class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                            <h3 class="uk-text-center loginTitle">New Game</h3>
+                            <form>
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <label for="newName">Name</label>
+                                        <input class='uk-input' id='newName' type="text" placeholder='Type name here'>
+
+                                    </div>
+                                </div>
+
+                                <div class="uk-margin">
+                                    <button type="button" class='uk-button uk-button-large uk-width-1-1'
+                                        onclick='newGame()'>Create
+                                        Game</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                    <div class="uk-width-3-4 uk-position-center uk-position-relative">
+                        <div
+                            class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                            <h3 class="uk-text-center loginTitle">Join Game</h3>
+                            <form>
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <label for="joinName">Name</label>
+                                        <input class='uk-input' id='joinName' type="text" placeholder='Type name here'>
+
+                                    </div>
+                                </div>
+
+                                <div class="uk-margin">
+                                    <label for="room">Room ID</label>
+                                    <input placeholder='Enter room ID here' class='uk-input' id='room' type="text">
+                                </div>
+
+                                <div class="uk-margin">
+                                    <button type="button" class='uk-button uk-button-large uk-width-1-1'
+                                        onclick='joinGame()'>Enter
+                                        Game</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src='scripts/setup.js'></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

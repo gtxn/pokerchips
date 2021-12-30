@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="uikit/uikit.css">
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+
+    <link rel="icon" href="./assets/icon.jpg">
+
+
+    <title>Poker Chips</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1 id='title'>Poker Chips</h1>
+        <p>Note: Please do not use this platform as a proxy for real cash. This platform is intended for fun only.</p>
+
+        <br>
+
+        <h3 id='gameRoomId'></h3>
+
+        <div class="gametable">
+
+            <div class="col" id='1'> </div>
+            <div class="col" id='2'> </div>
+            <div class="col" id='3'> </div>
+
+            <div class="col" id='4'> </div>
+            <div class="pot" id='pot'> </div>
+            <div class="col" id='5'> </div>
+
+            <div class="col" id='6'> </div>
+            <div class="col mybox" id='7'> </div>
+            <div class="col" id='8'> </div>
+
+        </div>
+
+        <br>
+
+        <h3>Put in pot</h3>
+        <div class="putinpot">
+            <button class='chip one' onclick='putPot(1)'>1</button>
+            <button class='chip five' onclick='putPot(5)'>5</button>
+            <button class='chip ten' onclick='putPot(10)'>10</button>
+            <button class='chip fifty' onclick='putPot(50)'>50</button>
+            <button class='chip hundred' onclick='putPot(100)'>100</button>
+        </div>
+
+        <br>
+
+        <div class="getfrompot">
+            <button class='uk-button uk-button-default' onclick='takeFromPot()'>Take all from pot</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="https://www.vecteezy.com/free-vector/vector">Vector Vectors by Vecteezy</a>
+    </footer>
+
+    <script src='scripts/setup.js'></script>
+    <script src="scripts/gamescript.js"></script>
+</body>
+
+</html>
