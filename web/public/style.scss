@@ -1,0 +1,307 @@
+@use 'sass:list';
+@use 'sass:string';
+
+$bg : #0c1941;
+$darkbg: #13141a;
+$lightbg:rgb(57, 85, 167);
+$light-footer-col: rgb(100, 122, 182);
+
+// Keyframe animations
+@keyframes fallingDots {
+    0% {
+        transform: translateY(0) rotateX(0deg);
+    }
+
+    100% {
+        $randY: random(50);
+        transform: translateY(($randY + 150) + vh) rotateX($randY * 50 + deg);
+    }
+}
+@keyframes colorchange {
+    0% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+// Falling poker chip animation
+$dotwidth: 20;
+$colors: blue, red, purple, yellow;
+ 
+div.animated {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.dot:after {
+    display:inline-block;
+    position: absolute;
+}
+
+div.dot {
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            transform: translate((random(100) - 50) + vw, (- ($i * $dotwidth))+px);        
+
+            &:after {
+                background-color: list.nth($colors, random(list.length($colors)));
+                height: #{$dotwidth} + px;
+                width: #{$dotwidth} + px;
+                border-radius: 50%;
+                border: 2px white solid;
+                margin: -$dotwidth * 0.5;
+        
+                animation-name: fallingDots;
+                animation-duration: #{random(10) + 3} + s;
+                animation-iteration-count: infinite;
+        
+                content: "" + random(100) + "";
+            }
+        }   
+    }
+
+}
+
+
+// Styling begins
+.container {
+    text-align: center;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+
+    height: fit-content;
+
+    top: 0;
+    overflow: hidden;
+    
+    background-image: linear-gradient($bg, $lightbg);
+
+    &.color-change-animate {
+        background: linear-gradient($darkbg, $lightbg, $darkbg, $lightbg);
+        background-size: 300% 300%;
+
+        animation-name: colorchange;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 10s;
+    }
+}
+
+h1 {
+    padding: 1em;
+    color: white;
+}
+
+#title {
+    color: #ffffff;
+    text-shadow: 3px 3px rgb(163, 163, 163);
+    font-weight: 500;
+    font-size: 3em;
+    border-bottom: 2px white solid;
+    background-image: linear-gradient(#13141a, #263258);
+    position: relative;
+    z-index: 1;
+
+    .bounce {
+        animation-name:bounce;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+h3#gameRoomId {
+    color: white;
+    border: 2px white solid;
+    margin: 1em 3em;
+    padding: 0.5em 3em;
+}
+
+.flex {
+    display: flex;
+}
+
+.signup-container {
+    padding-bottom: 100px;
+}
+
+.signupform:hover {
+    transform: translate(5px , 5px);
+}
+
+.loginTitle {
+    color: white;
+    text-shadow: 2px 2px rgb(163, 163, 163);
+    font-weight: 800;
+    font-size: 1.6em;
+}
+
+
+// Game styling
+.gametable {
+    text-align: center;
+
+    background-color: #627c91;
+    border: 2px black solid;
+    margin: 0 auto;
+
+    width: 300px;
+    height: 500px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.col {
+    border: 0.5px gray solid;
+    margin: 0.5em;
+    background-color: rgb(238, 238, 238);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #363370;
+}
+
+.playerbox {
+    background-color: #a595d0;
+    color: white;
+}
+
+.mybox {
+    background-color: #c69bf5;
+    border: 3px white solid;
+    color: white;
+    font-size: 1.5em;
+}
+
+.pot {
+    background-color: #2f495e;
+    font-weight: 400;
+    font-size: 2em;
+    color: white;
+
+    border: 0.5px gray solid;
+    margin: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $lightbg;
+    }
+}
+
+.chip-instruct {
+    border-bottom: 1px white solid;
+    margin: 0px 20vw; 
+    margin-bottom: 15px;
+}
+
+.putinpot {
+    text-align: center;
+}
+
+.chip {
+    background-size: 100%;
+    width: 50px;
+    height:50px;
+    color: yellow;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px black solid;
+    font-weight: 600;
+    font-size: 1.2em;
+
+    text-shadow: 
+            -2px -2px 0px black,
+            2px -2px 0px black,
+            -2px 2px 0px black,
+            2px 2px 0px black;
+
+    &.one {
+        background-image: url(assets/yellowchip.png);
+    }
+    &.five {
+        background-image: url(assets/redchip.png)
+    }
+    &.ten {
+        background-image: url(assets/bluechip.png)
+    }
+    &.fifty {
+        background-image: url(assets/greenchip.png)
+    }
+    &.hundred {
+        background-image: url(assets/blackchip.png)
+    }
+}
+
+button:hover,
+.chip:hover {
+    box-shadow: 2px 2px rgb(241, 241, 241);
+    transform: translate(1px, 1px)
+}
+
+.getfrompot {
+    margin-bottom: 20px;
+}
+
+// Footer styling
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+
+    &.light {
+        background-color: $light-footer-col;
+    }
+    &.dark {
+        background-color: $darkbg;
+    }
+}
+
+a:link {
+    color: rgb(153, 202, 248);
+}
+
+/* RESPONSIVE DESIGN */
+@media only screen and (min-width:700px){
+    .gametable{
+        width: 700px;
+        height: 350px;
+        border: 2px solid black;
+    }
+
+}
+
+@media only screen and (min-width:900px){
+    .gametable{
+        width: 900px;
+        height: 450px;
+        border: 2px solid black;
+
+    }
+}
+
+/* ANIMATION */
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}

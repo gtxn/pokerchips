@@ -1,8 +1,8 @@
-let SOCKURL = 'http://pokerchips-backend-env.us-east-1.elasticbeanstalk.com' || 'http://glendatxn.local:4000'
-let WEBURL = 'http://pokerchip-io.us-east-1.elasticbeanstalk.com' || 'http://localhost:3000'
+// let SOCKURL = 'http://pokerchips-backend-env.us-east-1.elasticbeanstalk.com' || 'http://glendatxn.local:4000'
+// let WEBURL = 'http://pokerchip-io.us-east-1.elasticbeanstalk.com' || 'http://localhost:3000'
 
-// let SOCKURL = 'http://glendatxn.local:4000'
-// let WEBURL = 'http://localhost:3000'
+let SOCKURL = 'http://glendatxn.local:4000'
+let WEBURL = 'http://localhost:3000'
 
 class Pot {
     constructor(money) {

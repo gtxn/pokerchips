@@ -59,6 +59,7 @@ class Room {
 
     removePlayer(name) {
         this.players = this.players.filter(x => x.name !== name)
+        this.numPlayers -= 1;
     }
 
     outOfPot(name) {

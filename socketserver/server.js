@@ -191,13 +191,21 @@ io.on("connection", socket => {
                         console.log(sockInfo.name, 'Real disconnect')
                         let room = rooms.filter(x => x.roomID == sockInfo.roomID)
 
-                        delete idNameDict[socket.id]
-
                         if (room.length >= 1) {
                             room = room[0]
                             room.removePlayer(sockInfo.name)
                             socket.to(sockInfo.roomID).emit('userDisconnect', sockInfo.name)
+
+                            // If no players are left in the room, destroy the room
+                            if (room.numPlayers == 0) {
+                                console.log('no players left oops')
+
+                                rooms = rooms.filter(x => x.roomID != room.roomID)
+                                usedRoomIDs = usedRoomIDs.filter(x => x != room.roomID)
+                            }
                         }
+
+                        delete idNameDict[socket.id]
                     }
                 }
             }, 5000)

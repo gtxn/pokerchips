@@ -1,172 +1,540 @@
-h1 {
-    padding: 1em;
-    color: white;
+@keyframes fallingDots {
+  0% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  100% {
+    transform: translateY(159vh) rotateX(450deg);
+  }
+}
+@keyframes colorchange {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+div.animated {
+  display: grid;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
-h1#title {
-    color: #ffffff;
-    text-shadow: 3px 3px rgb(163, 163, 163);
-    font-weight: 500;
-    font-size: 3em;
-    
-    animation-name:bounce;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+.dot:after {
+  display: inline-block;
+  position: absolute;
+}
 
+div.dot:nth-child(1) {
+  transform: translate(4vw, -20px);
+}
+div.dot:nth-child(1):after {
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  content: "33";
+}
+div.dot:nth-child(2) {
+  transform: translate(-10vw, -40px);
+}
+div.dot:nth-child(2):after {
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  content: "29";
+}
+div.dot:nth-child(3) {
+  transform: translate(-1vw, -60px);
+}
+div.dot:nth-child(3):after {
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  content: "91";
+}
+div.dot:nth-child(4) {
+  transform: translate(10vw, -80px);
+}
+div.dot:nth-child(4):after {
+  background-color: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  content: "80";
+}
+div.dot:nth-child(5) {
+  transform: translate(12vw, -100px);
+}
+div.dot:nth-child(5):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  content: "12";
+}
+div.dot:nth-child(6) {
+  transform: translate(46vw, -120px);
+}
+div.dot:nth-child(6):after {
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  content: "43";
+}
+div.dot:nth-child(7) {
+  transform: translate(2vw, -140px);
+}
+div.dot:nth-child(7):after {
+  background-color: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  content: "54";
+}
+div.dot:nth-child(8) {
+  transform: translate(1vw, -160px);
+}
+div.dot:nth-child(8):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  content: "94";
+}
+div.dot:nth-child(9) {
+  transform: translate(7vw, -180px);
+}
+div.dot:nth-child(9):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  content: "73";
+}
+div.dot:nth-child(10) {
+  transform: translate(25vw, -200px);
+}
+div.dot:nth-child(10):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  content: "2";
+}
+div.dot:nth-child(11) {
+  transform: translate(29vw, -220px);
+}
+div.dot:nth-child(11):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  content: "8";
+}
+div.dot:nth-child(12) {
+  transform: translate(-5vw, -240px);
+}
+div.dot:nth-child(12):after {
+  background-color: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  content: "25";
+}
+div.dot:nth-child(13) {
+  transform: translate(-1vw, -260px);
+}
+div.dot:nth-child(13):after {
+  background-color: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  content: "61";
+}
+div.dot:nth-child(14) {
+  transform: translate(10vw, -280px);
+}
+div.dot:nth-child(14):after {
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  content: "9";
+}
+div.dot:nth-child(15) {
+  transform: translate(-11vw, -300px);
+}
+div.dot:nth-child(15):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  content: "63";
+}
+div.dot:nth-child(16) {
+  transform: translate(12vw, -320px);
+}
+div.dot:nth-child(16):after {
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  content: "23";
+}
+div.dot:nth-child(17) {
+  transform: translate(34vw, -340px);
+}
+div.dot:nth-child(17):after {
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  content: "17";
+}
+div.dot:nth-child(18) {
+  transform: translate(-37vw, -360px);
+}
+div.dot:nth-child(18):after {
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  content: "84";
+}
+div.dot:nth-child(19) {
+  transform: translate(-16vw, -380px);
+}
+div.dot:nth-child(19):after {
+  background-color: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  content: "38";
+}
+div.dot:nth-child(20) {
+  transform: translate(47vw, -400px);
+}
+div.dot:nth-child(20):after {
+  background-color: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: -10;
+  animation-name: fallingDots;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  content: "86";
+}
+
+.container {
+  text-align: center;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  overflow: hidden;
+  background-image: linear-gradient(#0c1941, #3955a7);
+}
+.container.color-change-animate {
+  background: linear-gradient(#13141a, #3955a7, #13141a, #3955a7);
+  background-size: 300% 300%;
+  animation-name: colorchange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 10s;
+}
+
+h1 {
+  padding: 1em;
+  color: white;
+}
+
+#title {
+  color: #ffffff;
+  text-shadow: 3px 3px #a3a3a3;
+  font-weight: 500;
+  font-size: 3em;
+  border-bottom: 2px white solid;
+  background-image: linear-gradient(#13141a, #263258);
+  position: relative;
+  z-index: 1;
+}
+#title .bounce {
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 h3#gameRoomId {
-    color: white;
-    border: 2px white solid;
-    margin: 1em 3em;
-    padding: 0.5em 3em;
-}
-
-#pot:hover {
-    background-color: #4b6b86;
+  color: white;
+  border: 2px white solid;
+  margin: 1em 3em;
+  padding: 0.5em 3em;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
-.signupform {
-    margin: auto auto;
-    border: 2px black solid;
-    padding: 30px 30px;
+.signup-container {
+  padding-bottom: 100px;
+}
+
+.signupform:hover {
+  transform: translate(5px, 5px);
 }
 
 .loginTitle {
-    color: white;
-    text-shadow: 2px 2px rgb(163, 163, 163);
-    font-weight: 800;
-    font-size: 1.6em;
-}
-
-.center {
-    text-align: center;
+  color: white;
+  text-shadow: 2px 2px #a3a3a3;
+  font-weight: 800;
+  font-size: 1.6em;
 }
 
 .gametable {
-    text-align: center;
-
-    background-color: #627c91;
-    border: 2px black solid;
-    margin: 0 auto;
-
-    width: 300px;
-    height: 500px;
-
-    position: relative;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+  background-color: #627c91;
+  border: 2px black solid;
+  margin: 0 auto;
+  width: 300px;
+  height: 500px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .col {
-    border: 0.5px gray solid;
-    margin: 0.5em;
-    background-color: rgb(238, 238, 238);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    color: #363370;
+  border: 0.5px gray solid;
+  margin: 0.5em;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #363370;
 }
 
-
 .playerbox {
-    background-color: #a595d0;
-    color: white;
+  background-color: #a595d0;
+  color: white;
 }
 
 .mybox {
-    background-color: #c69bf5;
-    border: 3px white solid;
-    color: white;
-    font-size: 1.5em;
+  background-color: #c69bf5;
+  border: 3px white solid;
+  color: white;
+  font-size: 1.5em;
 }
 
 .pot {
-    background-color: #2f495e;
-    font-weight: 400;
-    font-size: 2em;
-    color: white;
-
-    border: 0.5px gray solid;
-    margin: 0.3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #2f495e;
+  font-weight: 400;
+  font-size: 2em;
+  color: white;
+  border: 0.5px gray solid;
+  margin: 0.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pot:hover {
+  background-color: #3955a7;
 }
 
+.chip-instruct {
+  border-bottom: 1px white solid;
+  margin: 0px 20vw;
+  margin-bottom: 15px;
+}
 
 .putinpot {
-    text-align: center;
-}
-
-.one {
-    background: url(assets/yellowchip.png) no-repeat;
-}
-.five {
-    background: url(assets/redchip.png) no-repeat;    
-}
-.ten {
-    background: url(assets/bluechip.png) no-repeat;    
-}
-.fifty {
-    background: url(assets/greenchip.png) no-repeat;    
-}
-.hundred {
-    background: url(assets/blackchip.png) no-repeat;    
+  text-align: center;
 }
 
 .chip {
-    background-size: 100%;
-    background-size: 50px 50px;
-    width: 50px;
-    height:50px;
-    color: yellow;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  color: yellow;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 3px black solid;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-shadow: -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black, 2px 2px 0px black;
+}
+.chip.one {
+  background-image: url(assets/yellowchip.png);
+}
+.chip.five {
+  background-image: url(assets/redchip.png);
+}
+.chip.ten {
+  background-image: url(assets/bluechip.png);
+}
+.chip.fifty {
+  background-image: url(assets/greenchip.png);
+}
+.chip.hundred {
+  background-image: url(assets/blackchip.png);
 }
 
 button:hover,
 .chip:hover {
-    box-shadow: 2px 2px rgb(241, 241, 241);
-    transform: translate(1px, 1px)
+  box-shadow: 2px 2px #f1f1f1;
+  transform: translate(1px, 1px);
 }
 
+.getfrompot {
+  margin-bottom: 20px;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+footer.light {
+  background-color: #647ab6;
+}
+footer.dark {
+  background-color: #13141a;
+}
+
+a:link {
+  color: #99caf8;
+}
 
 /* RESPONSIVE DESIGN */
-@media only screen and (min-width:700px){
-    .gametable{
-        width: 700px;
-        height: 350px;
-        border: 2px solid black;
-    }
+@media only screen and (min-width: 700px) {
+  .gametable {
+    width: 700px;
+    height: 350px;
+    border: 2px solid black;
+  }
 }
-
-@media only screen and (min-width:900px){
-    .gametable{
-        width: 900px;
-        height: 450px;
-        border: 2px solid black;
-
-    }
+@media only screen and (min-width: 900px) {
+  .gametable {
+    width: 900px;
+    height: 450px;
+    border: 2px solid black;
+  }
 }
-
 /* ANIMATION */
 @keyframes bounce {
-    0% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

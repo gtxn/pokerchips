@@ -2,7 +2,9 @@ html {
   font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  background: #202e5e;
+  /* background: #202e5e; */
+  /* background-color: #0c1941; */
+
   color: whitesmoke;
 }
 body {
@@ -8427,10 +8429,12 @@ html[dir="rtl"] .uk-slider > * {
 }
 
 .uk-card {
-  background-color: transparent;
   border: 2px #cabcff solid;
   box-shadow: 5px 5px #cabcff;
+  background-color: #202e5e;
+  z-index: inherit
 }
+
 label {
   color: white;
 }

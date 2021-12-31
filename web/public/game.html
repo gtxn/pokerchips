@@ -22,7 +22,8 @@
 </head>
 
 <body>
-    <div class="center">
+    <div class="container color-change-animate">
+
         <h1 id='title'>Poker Chips</h1>
         <p>Note: Please do not use this platform as a proxy for real cash. This platform is intended for fun only.</p>
 
@@ -48,7 +49,7 @@
 
         <br>
 
-        <h3>Put in pot</h3>
+        <h3 class='chip-instruct'>Press chips to put in pot</h3>
         <div class="putinpot">
             <button class='chip one' onclick='putPot(1)'>1</button>
             <button class='chip five' onclick='putPot(5)'>5</button>
@@ -63,11 +64,12 @@
             <button class='uk-button uk-button-default' onclick='takeFromPot()'>Take all from pot</button>
         </div>
 
-    </div>
+        <footer class='dark'>
+            <p>Created by gtxn</p>
+            Img creds: <a href="https://www.vecteezy.com/free-vector/vector">Vector Vectors by Vecteezy</a>
+        </footer>
 
-    <footer>
-        <a href="https://www.vecteezy.com/free-vector/vector">Vector Vectors by Vecteezy</a>
-    </footer>
+    </div>
 
     <script src='scripts/setup.js'></script>
     <script src="scripts/gamescript.js"></script>
