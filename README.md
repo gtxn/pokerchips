@@ -3,7 +3,7 @@ This webapp hosted on AWS elastic beanstalk allows the counting of poker chips e
 
 I was inspired to build this application when my friends and I were stuck under a shelter with nothing but a pack of cards and our phones. (we went biking. it rained.) We tried to play poker but it got really messy... But now ---- no chips, no problem! 😉
 
-
+-- STOPPED WORKING : Removed elastic beanstalk because I ran out of credits😔 --
 Try it here: http://pokerchip-io.us-east-1.elasticbeanstalk.com/
 
 
